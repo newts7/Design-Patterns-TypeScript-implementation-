@@ -13,4 +13,4 @@ export class SimpleSingleton {
     private sayHello(): void {
         console.log("Hello");
     }
-};
+}
