@@ -5,9 +5,9 @@ export interface Bike{
 }
 
 interface IBikeBuilder {
-    addWheels(): Bike
-    addBreak(): Bike
-    addGear(): Bike
+    addWheels(): BikeBuilder
+    addBreaks(): BikeBuilder
+    addGear(): BikeBuilder
 }
 
 export class BikeDirector{
@@ -22,7 +22,7 @@ export class BikeDirector{
     }
 }
 
-export class BikeBuilder{
+export class BikeBuilder implements IBikeBuilder{
     private readonly bike: Bike;
     constructor(){
         this.bike ={};
